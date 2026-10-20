@@ -1,0 +1,907 @@
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f1e8;
+    color: #222;
+    font-family: "Montserrat", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    width: 100%;
+    height: 110px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 5%;
+
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(8px);
+
+    a{
+        text-decoration: none;
+        color: #111820;
+    }
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.imgHeader {
+    width: 150px;
+    height: 90px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #174a73;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c92535;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #c92535;
+
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    height: 100vh;
+    min-height: 650px;
+
+    /* IMAGEM DE FUNDO */
+    background-image: url("img/croacia-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    /* camada escura sobre a imagem */
+    background: rgba(0, 0, 0, 0.50);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    max-width: 700px;
+
+    margin-left: 10%;
+
+    color: white;
+
+    position: relative;
+    z-index: 2;
+}
+
+.content h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 70px;
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.content p {
+    max-width: 600px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    background: #c92535;
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    border-radius: 3px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #174a73;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   TEXTOS PADRÃO
+========================================= */
+
+.subtitulo {
+    display: block;
+
+    color: #c92535;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   SOBRE A CROÁCIA
+========================================= */
+
+.sobre {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 650px;
+
+    background: #f5f1e8;
+}
+
+.sobre-imagem {
+    min-height: 600px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.sobre-texto {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 80px 10%;
+}
+
+.sobre-texto h2 {
+    color: #174a73;
+
+    margin-bottom: 30px;
+}
+
+.sobre-texto p {
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+    color: #444;
+}
+
+
+/* =========================================
+   VÍDEO
+========================================= */
+
+.video {
+    padding: 100px 8%;
+
+    background: #174a73;
+
+    color: white;
+}
+
+.ytb {
+    max-width: 1000px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.ytb .subtitulo {
+    color: #f2c94c;
+}
+
+.ytb h2 {
+    margin-bottom: 20px;
+}
+
+.ytb > p {
+    max-width: 650px;
+
+    margin: 0 auto 40px;
+
+    line-height: 1.7;
+}
+
+.video-container {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding-bottom: 56.25%;
+
+    height: 0;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =========================================
+   GASTRONOMIA
+========================================= */
+
+.gastronomia {
+    padding: 110px 8%;
+
+    background: #f5f1e8;
+
+    text-align: center;
+}
+
+.gastronomia h2 {
+    color: #174a73;
+
+    margin-bottom: 25px;
+}
+
+.introducao {
+    max-width: 850px;
+
+    margin: 0 auto 60px;
+
+    line-height: 1.8;
+
+    color: #555;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.produto {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+.produto img {
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+}
+
+.produto h3 {
+    margin: 25px 15px 12px;
+
+    color: #174a73;
+
+    font-size: 18px;
+
+    letter-spacing: 1.5px;
+}
+
+.produto p {
+    padding: 0 25px 30px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FRITULE
+========================================= */
+
+.fritule {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #ffffff;
+}
+
+.fritule-imagem {
+    min-height: 700px;
+}
+
+.fritule-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.fritule-texto {
+    padding: 80px 10%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.fritule-texto h2 {
+    color: #c92535;
+
+    font-size: 65px;
+
+    margin-bottom: 25px;
+}
+
+.fritule-texto > p {
+    color: #555;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   CURIOSIDADE
+========================================= */
+
+.curiosidade {
+    margin-top: 20px;
+
+    padding: 25px;
+
+    background: #f5f1e8;
+
+    border-left: 5px solid #c92535;
+
+    border-radius: 5px;
+}
+
+.curiosidade h3 {
+    color: #174a73;
+
+    margin-bottom: 10px;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+}
+
+.curiosidade p {
+    color: #555;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   CULTURA
+========================================= */
+
+.cultura {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #174a73;
+
+    color: white;
+}
+
+.cultura-texto {
+    padding: 90px 10%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.cultura-texto .subtitulo {
+    color: #f2c94c;
+}
+
+.cultura-texto h2 {
+    margin-bottom: 30px;
+}
+
+.cultura-texto p {
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+    color: #e9e9e9;
+}
+
+.cultura-imagem {
+    min-height: 600px;
+}
+
+.cultura-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    min-height: 220px;
+
+    padding: 50px 8%;
+
+    background: #0c2d47;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 80px;
+
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: 100px;
+
+    object-fit: contain;
+}
+
+.footer-text h3 {
+    color: #f2c94c;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+.footer-text p {
+    margin: 8px 0;
+
+    color: #ddd;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        height: auto;
+
+        flex-direction: column;
+
+        padding: 10px;
+    }
+
+    .imgHeader {
+        width: 110px;
+        height: 70px;
+    }
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        padding-bottom: 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+
+        letter-spacing: 1px;
+    }
+
+    .content {
+        margin: 0 8%;
+    }
+
+    .content h1 {
+        font-size: 48px;
+    }
+
+    .sobre,
+    .fritule,
+    .cultura {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-imagem,
+    .fritule-imagem,
+    .cultura-imagem {
+        min-height: 400px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    .fritule-texto h2 {
+        font-size: 50px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 25px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .content h1 {
+        font-size: 40px;
+    }
+
+    .content p {
+        font-size: 15px;
+    }
+
+    .sobre-texto,
+    .fritule-texto,
+    .cultura-texto {
+        padding: 60px 8%;
+    }
+
+    .gastronomia,
+    .video {
+        padding: 70px 6%;
+    }
+
+    .produto img {
+        height: 220px;
+    }
+
+}
+
+
+
+/* =========================================
+   BOTÃO DE TEMA
+========================================= */
+
+.tema-btn {
+    border: none;
+
+    background: #174a73;
+
+    color: white;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.tema-btn:hover {
+    transform: rotate(20deg) scale(1.1);
+
+    background: #c92535;
+}
+
+
+/* =========================================
+   ANIMAÇÃO DAS SEÇÕES
+========================================= */
+
+.animacao {
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.mostrar {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   BOTÃO VOLTAR AO TOPO
+========================================= */
+
+.topo-btn {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #c92535;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 9999;
+}
+
+.mostrar-topo {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.topo-btn:hover {
+    background: #174a73;
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   MODO ESCURO
+========================================= */
+
+body.modo-escuro {
+    background: #111820;
+
+    color: white;
+}
+
+body.modo-escuro .sobre {
+    background: #111820;
+}
+
+body.modo-escuro .sobre-texto p {
+    color: #ddd;
+}
+
+body.modo-escuro .gastronomia {
+    background: #111820;
+}
+
+body.modo-escuro .introducao {
+    color: #ccc;
+}
+
+body.modo-escuro .produto {
+    background: #1c2730;
+}
+
+body.modo-escuro .produto p {
+    color: #ddd;
+}
+
+body.modo-escuro .fritule {
+    background: #18232c;
+}
+
+body.modo-escuro .fritule-texto > p {
+    color: #ddd;
+}
+
+body.modo-escuro .curiosidade {
+    background: #111820;
+}
+
+body.modo-escuro header {
+    background: rgba(17, 24, 32, 0.95);
+}
+
+
+/* =========================================
+RESPONSIVIDADE DO BOTÃO
+========================================= */
+
+@media (max-width: 900px) {
+
+    .tema-btn {
+        margin-top: 5px;
+    }
+
+}
+
